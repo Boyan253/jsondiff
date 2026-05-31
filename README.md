@@ -13,3 +13,15 @@
 python jsondiff.py before.json after.json
 python jsondiff.py before.json after.json --exit-code   # exit 1 if different
 ```
+
+## Output
+
+```
++ user.email = "ada@example.com"
+- user.legacy_id = 4471
+~ user.plan: "free" -> "pro"
+~ items[2].qty: 1 -> 3
+```
+
+`+` added, `-` removed, `~` changed. Paths are dotted for objects and
+bracketed for array indices, so you can paste one straight into `jq`.
