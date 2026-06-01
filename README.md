@@ -25,3 +25,12 @@ python jsondiff.py before.json after.json --exit-code   # exit 1 if different
 
 `+` added, `-` removed, `~` changed. Paths are dotted for objects and
 bracketed for array indices, so you can paste one straight into `jq`.
+
+## In CI
+
+`--exit-code` makes the tool exit 1 when anything differs, which is enough to
+fail a build on unexpected API or config drift:
+
+```
+python jsondiff.py schema.committed.json schema.generated.json --exit-code
+```
