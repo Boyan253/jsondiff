@@ -34,3 +34,10 @@ fail a build on unexpected API or config drift:
 ```
 python jsondiff.py schema.committed.json schema.generated.json --exit-code
 ```
+
+## Tests
+
+```
+pip install pytest
+pytest
+```
