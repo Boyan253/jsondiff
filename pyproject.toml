@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jsondiff"
+version = "0.1.0"
+description = "Deep diff two JSON files and print added, removed and changed paths."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/Boyan253/jsondiff"
+
+[project.scripts]
+jsondiff = "jsondiff:main"
+
+[tool.setuptools]
+py-modules = ["jsondiff"]

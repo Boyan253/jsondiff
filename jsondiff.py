@@ -5,6 +5,8 @@ import argparse
 import json
 import sys
 
+__version__ = "0.1.0"
+
 ADDED, REMOVED, CHANGED = "+", "-", "~"
 
 
@@ -58,6 +60,8 @@ def load(path):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--version", action="version",
+                    version="%(prog)s " + __version__)
     ap.add_argument("before")
     ap.add_argument("after")
     ap.add_argument("--exit-code", action="store_true",
